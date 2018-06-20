@@ -1,0 +1,14 @@
+{
+  "name": "naivetest",
+  "version": "1.0.0",
+  "description": "A test suite for the naiveuser API",
+  "scripts": {
+    "start": "node ./node_modules/mocha/bin/mocha"
+  },
+  "author": "Randal L Kamradt Sr",
+  "license": "MIT",
+  "dependencies": {
+    "chakram": "^1.5.0",
+    "mocha": "^5.2.0"
+  }
+}

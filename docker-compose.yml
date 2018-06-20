@@ -1,0 +1,27 @@
+version: "3"
+services:
+  test:
+    build: .
+    networks:
+      - network
+  redis:
+    image: redis:alpine
+    networks:
+      - network
+  naiveuser:
+    image: rlkamradt/naiveuser
+    ports:
+      - 3000:3000
+    networks:
+      - network
+  naivecoin:
+    image: rlkamradt/naivecoin
+    environment:
+     - NAME=1
+     - HOST=0.0.0.0
+    volumes:
+     - ./:/naivecoin
+    networks:
+      - network
+networks:
+  network:
